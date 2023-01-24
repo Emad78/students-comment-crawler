@@ -19,35 +19,32 @@
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
-# [project_name] <a name="about-project"></a>
-> a decorative picture or a screenshot of the project results.
-> a discription of project in about a paragraph.
+# [Students comment crawler] <a name="about-project"></a>
+This project is used to crawl student comments from many student websites.
 
 ## Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+This project uses the Selenium package for crawling. Chrome browser is also used.
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Easy usage]**
+- **[No need for user interaction]**
+- **[output is a CSV file]**
 
 ## Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
 ```sh
- !pip install tensorflow
+ !pip install selenium
 ```
+
+Also, you need a chrome browser and its webdriver.
 
 ### Setup
 
@@ -55,77 +52,45 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
-
-### Install
-
-Install this project with:
-```sh
-something
+  git clone git@github.com:Emad78/students-comment-crawler.git
 ```
 
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, based on a website that you want to crawl, you should run its code. There are three classes for crawling MehroMah, Gozine2 and Ghalamchi websites.
+For Gozine2:
 
 ```sh
-something
+crawler = Crawler_Gozine2(url)
+data = crawler.run()
 ```
 
-### Run tests
-
-To run tests, run the following command:
-
+For MehroMah:
 ```sh
-something
+crawler = Crawler_MehroMah()
+data = crawler.run()
 ```
+
+For Ghalamchi:
+```sh
+crawler = Crawler_Ghalamchi()
+data = crawler.run(url)
+```
+output of run method is a pandas dataframe for all above objects. Crawler Ghalamchi and Crawler_Ghalamchi2 are same but use for different ghalamchi page with different XPath for finding elements
+
 
 ## Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/test)
-- Twitter: [@twitterhandle](https://twitter.com/test)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/test)
-
-**Author2**
-
-- GitHub: [@githubhandle](https://github.com/test)
-- Twitter: [@twitterhandle](https://twitter.com/test)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/test)
+- GitHub: [@Emad78](https://github.com/Emad78)
 
 
-## Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-## Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project please give us a ⭐
-
-## Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-## License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
